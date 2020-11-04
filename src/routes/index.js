@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
-const TemperaturaController = require('../Controllers/TemperaturaController');
+const TemperatureController = require('../controllers/TemperatureController');
 
-routes.get('/temperatura', TemperaturaController.index);
+routes.get('/temperature', TemperatureController.index);
 
 module.exports = routes;
