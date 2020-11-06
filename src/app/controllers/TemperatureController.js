@@ -5,6 +5,7 @@ module.exports = {
     async index(req, res) {
         const city = enumCity.city;
         const { data : { results } } = await api.get(`weather?woeid=${city}`);
+
         return res.json(results);
     }
 }
