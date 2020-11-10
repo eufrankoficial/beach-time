@@ -1,11 +1,10 @@
-const enumCity = require('../enums/cities');
-const api = require('../services/api')
+const weatherApiRequest = require('../api/WeatherApiRequest');
 
 module.exports = {
     async index(req, res) {
-        const city = enumCity.city;
-        const { data : { results } } = await api.get(`weather?woeid=${city}`);
-
-        return res.json(results);
+        const results = await weatherApiRequest.getCity();
+        
+        
+        return res.json(currentCity);
     }
 }
